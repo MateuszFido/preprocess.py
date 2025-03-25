@@ -1,6 +1,5 @@
 from pyteomics import mzml
 import os
-from read_mzml import read_mzml
 import time
 import numpy as np
 from pathlib import Path
