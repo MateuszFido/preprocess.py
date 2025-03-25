@@ -1,5 +1,4 @@
 import numpy as np
-from read_csv import read_csv
 from pathlib import Path
 from peak_pick import peak_pick
 import settings

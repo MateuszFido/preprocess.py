@@ -1,7 +1,7 @@
 from pyteomics import mzml
 import os, csv, time
 import numpy as np
-from scipy.integrate import trapz
+from scipy.integrate import trapezoid
 from peak_pick import peak_pick
 from pathlib import Path
 import settings
@@ -28,7 +28,7 @@ def trace(path: str, features: list, MZ_AXIS: np.ndarray) -> np.ndarray:
                 if i < len(features)+2:
                     data[i][0] = round(np.median(feature.mz), 4)
                 feature_int = int_interp[feature.width[0]:feature.width[1]]
-                time_trace = trapz(feature_int)
+                time_trace = trapezoid(feature_int)
                 data[i][j] = time_trace
                 i += 1
             j += 1
