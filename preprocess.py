@@ -31,10 +31,8 @@ import os, time
 from pathlib import Path
 import numpy as np
 import csv
-import shutil
 from average import average
 from peak_pick import peak_pick
-from read_mzml import read_mzml
 from time_trace import time_trace
 from composite_spectrum import composite_spectrum
 from settings import MZ_AXIS
