@@ -1,6 +1,6 @@
 from pathlib import Path
 import numpy as np
-import os, time
+import os, time, shutil
 from pyteomics import mzml
 from PyQt6.QtCore import pyqtSignal, QThread
 
@@ -16,7 +16,7 @@ class AverageThread(QThread):
         st = time.time()
         filelist = [file for file in os.listdir(self.path.parent.absolute()) if file.lower().endswith(".mzml")]
         counter = 0
-        self.progress_signal.emit(f"Starting the averaging...", 0)
+        self.progress_signal.emit(f"\nStarting the averaging...", 0)
         for file in filelist:
             counter += 1
             mzml_path = mzml.MzML(str(self.path.parent.absolute() / file))  # Instantiate the MzML reader object
@@ -41,7 +41,3 @@ class AverageThread(QThread):
                 np.savetxt(average_csv, data_matrix, delimiter=",", encoding='utf-8')
 
         self.progress_signal.emit(f"\nAveraging complete in {round(time.time() - st, 2)} seconds.", 100)
-        self.exit()
-
-    def __del__(self):
-        self.wait()

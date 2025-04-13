@@ -1,11 +1,10 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
-import os
-import os
+import os, shutil
 from settings import MZ_AXIS
 from average import AverageThread
 from composite_spectrum import CompositeSpectrumThread
-from time_trace import time_trace
-from intensity_matrix import intensity_matrix
+from time_trace import TimeTraceThread
+from intensity_matrix import IntensityMatrixThread
 from pathlib import Path
 from PyQt6.QtCore import QThread, pyqtSignal
 
@@ -39,6 +38,10 @@ class Ui_MainWindow(object):
         self.progress_window.setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);")
         self.progress_window.setText("")
         self.progress_window.setObjectName("progress_window")
+        self.progress_window.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.scrollArea = QtWidgets.QScrollArea(parent=self.centralwidget)
+        self.scrollArea.setGeometry(QtCore.QRect(20, 430, 900, 271))
+        self.scrollArea.setWidget(self.progress_window)
         self.progress_bar = QtWidgets.QProgressBar(parent=self.centralwidget)
         self.progress_bar.setGeometry(QtCore.QRect(20, 430, 900, 20))
         self.progress_bar.setProperty("value", 0)
@@ -67,6 +70,7 @@ class Ui_MainWindow(object):
         self.statusbar.showMessage(f"Preprocessing on path {self.input_list.item(0).text()} in progress...")
         self.preprocess(self.input_list.item(0).text())
         self.start_button.setEnabled(False)
+        self.browseButton.setEnabled(False)
 
     def update_progress_bar(self, text, progress):
         self.progress_bar.setValue(progress)
@@ -85,26 +89,44 @@ class Ui_MainWindow(object):
     def preprocess(self, path):
         path = Path(path)
 
-        if "average" not in os.listdir(path.absolute()):
-            os.mkdir(path.absolute() / "average")
-        if "time_traces" not in os.listdir(path.absolute()):
-            os.mkdir(path.absolute() / "time_traces")
+        # If there are any files from previous analyses, delete them
+        if os.path.exists(path / "average"):
+            shutil.rmtree(path / "average")
+        if os.path.exists(path / "time_traces"):
+            shutil.rmtree(path / "time_traces")
+        if os.path.exists(path / "composite_spectrum_pos.csv"):
+            os.remove(path / "composite_spectrum_pos.csv")
+        if os.path.exists(path / "composite_spectrum_neg.csv"):
+            os.remove(path / "composite_spectrum_neg.csv")
+        
+        # Recreate
+        os.mkdir(path / "average")
+        os.mkdir(path / "time_traces")
 
         # Averaging spectra
         self.average = AverageThread(path / "average", MZ_AXIS)
         self.average.progress_signal.connect(self.update_progress_bar)
         self.average.start()
         # When AverageThread finishes, end the AverageThread safely and start the CompositeSpectrumThread
+        self.average.finished.connect(self.average.deleteLater)
+        self.composite = CompositeSpectrumThread(path, MZ_AXIS)
+        self.composite.progress_signal.connect(self.update_progress_bar)
+        self.average.finished.connect(self.composite.start)
+
+        # When CompositeSpectrumThread finishes, end the CompositeSpectrumThread safely and start the TimeTraceThread
+        self.composite.finished.connect(self.composite.deleteLater)
+        self.time_trace = TimeTraceThread(path / "time_traces", MZ_AXIS)
+        self.time_trace.progress_signal.connect(self.update_progress_bar)
+        self.composite.finished.connect(self.time_trace.start)
+        # When TimeTraceThread finishes, end the TimeTraceThread safely and start the IntensityMatrixThread
+        self.time_trace.finished.connect(self.time_trace.deleteLater)
         
+        self.intensity_matrix = IntensityMatrixThread(path)
+        self.time_trace.finished.connect(self.intensity_matrix.start)
+        self.intensity_matrix.finished.connect(self.intensity_matrix.deleteLater)
+        
+        self.intensity_matrix.finished.connect(self.finish_message)
+        self.start_button.setEnabled(True) 
 
-
-        # # Average the averaged spectra to create a composite spectrum of all mzML files on the file path
-        # if "composite_spectrum" not in os.listdir(path.parent.absolute()):
-        #     composite_spectrum(path, MZ_AXIS)
-
-        # # Construct the respective time traces
-        # time_trace(path / "time_traces", MZ_AXIS)
-
-        # # Write the intensity matrix of all samples and all peaks
-        # intensity_matrix(path)
-
+    def finish_message(self):
+        self.statusbar.showMessage(f"Preprocessing complete! Results written to {self.input_list.item(0).text()}/intensity_matrix.csv.", 10000)

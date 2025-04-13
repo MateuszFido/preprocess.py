@@ -6,7 +6,7 @@ import os, sys, time
 from PyQt6.QtCore import QThread, pyqtSignal
 
 class CompositeSpectrumThread(QThread):
-    progress_signal = pyqtSignal(str)
+    progress_signal = pyqtSignal(str, int)
     
     def __init__(self, path: str, MZ_AXIS: np.ndarray):
         super(CompositeSpectrumThread, self).__init__()
@@ -17,7 +17,7 @@ class CompositeSpectrumThread(QThread):
         # Start time
         st = time.time()
         # Average the averaged spectra to create a composite spectrum of all mzML files on the file path
-        self.progress_signal.emit(f"Preparing the composite spectra...", 0)
+        self.progress_signal.emit(f"\nPreparing the composite spectra...", 0)
 
         with open(self.path / "composite_spectrum_pos.csv", "w+") as spectrum_pos, open(self.path / "composite_spectrum_neg.csv", "w+") as spectrum_neg:
             
@@ -30,9 +30,8 @@ class CompositeSpectrumThread(QThread):
             # Process all directories
             for root, dirs, files in os.walk(self.path):
                 for file in files:
-                    if 'avg' in file:
+                    if 'avg_' in file:
                         file_path = Path(root) / file
-                        print(f"Processing file {file_path}...", flush=True)
                         data = np.genfromtxt(file_path, delimiter=',')
                         corr_intensity = data.transpose()[1]
                         if 'pos' in file:
@@ -56,5 +55,5 @@ class CompositeSpectrumThread(QThread):
             et = time.time()
             elapsed_time = et - st
             
-            self.progress_signal.emit(f"Finished creating composite spectra in {elapsed_time:.2f} seconds.", 100)
+            self.progress_signal.emit(f"\nFinished creating composite spectra in {elapsed_time:.2f} seconds.", 100)
 
