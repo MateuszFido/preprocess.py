@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="238.47278mm"
+   height="50.826279mm"
+   viewBox="0 0 238.47278 50.826279"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="logo-preprocess.svg"
+   inkscape:export-filename="logo-preprocess.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0307169"
+     inkscape:cx="306.58273"
+     inkscape:cy="255.64731"
+     inkscape:window-width="2560"
+     inkscape:window-height="1365"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.727747,-11.551427)"><rect
+       style="fill:#323232;fill-opacity:1;stroke-width:0.630255"
+       id="rect3"
+       width="238.47278"
+       height="50.826279"
+       x="8.727747"
+       y="11.551427" /><text
+       xml:space="preserve"
+       style="font-size:8.46667px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="12.064821"
+       y="21.049267"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'SF Pro';-inkscape-font-specification:'SF Pro';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="12.064821"
+         y="21.049267">preprocess.py</tspan></text><text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'SF Pro';-inkscape-font-specification:'SF Pro';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="11.808126"
+       y="29.777012"
+       id="text3"><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="11.808126"
+         y="29.777012"
+         id="tspan10">Open-source preprocessing script with a UI framework for HRMS data.</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="11.808126"
+         y="35.068672"
+         id="tspan3">Distributed under the MIT License. </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="11.808126"
+         y="40.360336"
+         id="tspan6">Last modified: 2025-Apr-13</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="11.808126"
+         y="45.652"
+         id="tspan4" /><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="11.808126"
+         y="50.943661"
+         id="tspan8"><tspan
+   style="font-weight:bold"
+   id="tspan9">Disclaimer: </tspan>The workload is computationally intensive and <tspan
+   style="font-style:normal;font-weight:bold"
+   id="tspan12">not</tspan> designed for consumer hardware. </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="11.808126"
+         y="56.235325"
+         id="tspan11">This pipeline should only be run parallelized, using a high-performance computing cluster.</tspan></text><path
+       d="m 187.07518,22.129172 c 0,-1.655873 0.5858,-3.069615 1.75742,-4.241223 1.1716,-1.171608 2.58534,-1.757412 4.24123,-1.757412 1.65586,0 3.0696,0.585804 4.24122,1.757412 1.17159,1.171608 1.75741,2.58535 1.75741,4.241223 0,1.655873 -0.58581,3.069614 -1.75741,4.241222 -1.17161,1.171609 -2.58535,1.757425 -4.24122,1.757425 -1.65589,0 -3.06963,-0.585804 -4.24123,-1.757425 -1.17162,-1.171596 -1.75742,-2.58536 -1.75742,-4.241222 z m 0.6561,0 c 0,1.468428 0.52332,2.725943 1.56995,3.77259 1.04664,1.046626 2.30417,1.569957 3.7726,1.569957 1.46841,0 2.72594,-0.52332 3.77258,-1.569957 1.04663,-1.046636 1.56995,-2.304162 1.56995,-3.77259 0,-1.468416 -0.52331,-2.725942 -1.56995,-3.772579 -1.04664,-1.046636 -2.30418,-1.569954 -3.77258,-1.569954 -1.46843,0 -2.72595,0.523318 -3.7726,1.569954 -1.04663,1.046637 -1.56995,2.304163 -1.56995,3.772579 z m 1.68713,1.288769 c -0.0312,-0.03124 -0.0312,-0.06249 0,-0.09373 0.0625,-0.06249 0.14059,-0.08592 0.23431,-0.0703 0.0937,0.01562 0.1484,0.03124 0.16402,0.04687 0.10935,0.04686 0.23042,0.152303 0.3632,0.316341 0.13277,0.164026 0.23822,0.277275 0.31633,0.339761 0.37492,0.312429 0.75764,0.335861 1.14817,0.0703 0.0312,-0.10935 0.082,-0.20308 0.1523,-0.281198 0.0703,-0.07811 0.1367,-0.132771 0.19918,-0.164026 0.0625,-0.03124 0.17185,-0.07811 0.32806,-0.140593 -0.51552,-0.04686 -0.93338,-0.136693 -1.25363,-0.269475 -0.32023,-0.132782 -0.57409,-0.300707 -0.76154,-0.503786 -0.24995,-0.281186 -0.40226,-0.648291 -0.45694,-1.101311 -0.0547,-0.453023 -0.0195,-0.866991 0.10546,-1.241906 0.0937,-0.234321 0.2265,-0.445198 0.39833,-0.632668 -0.12497,-0.390537 -0.10154,-0.835747 0.0703,-1.335634 0.49989,0.03124 0.95291,0.20308 1.35907,0.515508 0.78107,-0.203079 1.59339,-0.210889 2.43694,-0.02343 0.10934,-0.07811 0.27728,-0.175735 0.50378,-0.292909 0.22651,-0.11716 0.51161,-0.183558 0.85528,-0.19918 0.0625,0.171838 0.10545,0.374915 0.12888,0.609236 0.0234,0.234323 0.0117,0.453023 -0.0351,0.656102 0.35929,0.374915 0.54675,0.874801 0.56237,1.499659 0,0.499885 -0.0859,0.913853 -0.25774,1.241904 -0.17184,0.328051 -0.47646,0.601426 -0.91386,0.820113 -0.29681,0.140606 -0.68735,0.226512 -1.17161,0.257755 0.21871,0.10935 0.37883,0.222612 0.48037,0.339772 0.10155,0.117162 0.16793,0.300707 0.19919,0.55065 v 0.738132 l 0.0234,0.714676 c 0.0469,0.07812 0.10155,0.144504 0.16404,0.19919 0.0625,0.05468 0.11716,0.09373 0.16402,0.117161 0.0468,0.02343 0.0625,0.05859 0.0468,0.10545 -0.0156,0.04687 -0.0781,0.0703 -0.18745,0.0703 -0.26557,0 -0.47645,-0.09373 -0.63266,-0.281199 -0.0469,-0.07811 -0.0703,-0.171824 -0.0703,-0.281186 v -1.124752 c 0,-0.124972 -0.0312,-0.214802 -0.0937,-0.269476 -0.0625,-0.05469 -0.12497,-0.08983 -0.18746,-0.105451 v 1.476227 c 0,0.265565 0.0312,0.437401 0.0937,0.515508 0.0625,0.07811 0.10154,0.156226 0.11717,0.234322 0.0156,0.01562 0.004,0.02733 -0.0351,0.03514 -0.039,0.0078 -0.10544,-0.0039 -0.19918,-0.03514 -0.20308,-0.04686 -0.34367,-0.152316 -0.42178,-0.316342 -0.0781,-0.164023 -0.11716,-0.339771 -0.11716,-0.527228 V 24.14434 h -0.30462 v 1.452793 c 0,0.187458 -0.0391,0.367116 -0.11717,0.538941 -0.10934,0.218711 -0.31243,0.33586 -0.60923,0.351482 -0.0469,-0.01562 -0.0703,-0.03124 -0.0703,-0.04685 0.0156,-0.01563 0.0625,-0.09373 0.14059,-0.234321 0.0156,-0.03124 0.0351,-0.09373 0.0586,-0.187458 0.0234,-0.09373 0.0351,-0.203079 0.0351,-0.32805 v -1.476238 c -0.0625,0.01562 -0.12107,0.05076 -0.17575,0.105449 -0.0547,0.05469 -0.082,0.144506 -0.082,0.269477 v 1.124745 c 0,0.109337 -0.0234,0.203078 -0.0703,0.281186 -0.14059,0.187457 -0.35148,0.281197 -0.63266,0.281197 -0.10935,0 -0.17183,-0.02343 -0.18746,-0.0703 -0.0156,-0.03124 -0.0117,-0.05859 0.0117,-0.08202 0.0234,-0.02343 0.0586,-0.05077 0.10545,-0.08202 0.0469,-0.03124 0.0781,-0.05469 0.0937,-0.0703 0.0625,-0.04687 0.10933,-0.10935 0.14059,-0.187458 0.0469,-0.06249 0.0586,-0.226511 0.0351,-0.492076 -0.0234,-0.265564 -0.0273,-0.437401 -0.0117,-0.515507 -0.40618,0.140592 -0.82013,0.07028 -1.24192,-0.21089 -0.12497,-0.124971 -0.24995,-0.304631 -0.37492,-0.538939 -0.0937,-0.171848 -0.28118,-0.374928 -0.56236,-0.609249 z"
+       id="path1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.011998;stroke-opacity:1" /><text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:'SF Pro';-inkscape-font-specification:'SF Pro';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.264583;stroke-opacity:1"
+       x="200.97905"
+       y="23.375326"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="font-weight:normal;stroke-width:0.264583"
+         x="200.97905"
+         y="23.375326">github.com/MateuszFido</tspan></text><g
+       id="ETH_zurich_logo"
+       transform="matrix(0.19464802,0,0,0.19464802,202.30355,38.297222)"
+       style="fill:#ffffff;fill-opacity:1">
+	<g
+   id="ETH_Zurich_short"
+   style="fill:#ffffff;fill-opacity:1">
+		<path
+   d="m 142.7,89.7 c -1.1,5.5 -5.4,5.8 -6.2,5.8 -2.4,0 -3.8,-1.4 -3.8,-3.7 0,-0.7 0.1,-1.3 0.2,-2 l 2.6,-13.1 h -3.1 l -2.7,13.4 v 0.2 c -0.1,0.6 -0.2,1.3 -0.2,1.9 -0.2,3.1 2.1,5.8 5.2,6 0,0 0,0 0,0 0.2,0 0.4,0 0.6,0 2.3,0.1 4.6,-0.8 6.2,-2.5 l -0.4,2.2 v 0 h 3.1 l 4.2,-21.3 h -3.2 z"
+   id="path1-6"
+   style="fill:#ffffff;fill-opacity:1" />
+		<path
+   d="m 163.9,76.4 c -2.3,-0.1 -4.4,0.9 -5.9,2.7 l 0.5,-2.4 h -3.1 l -4.2,21.2 v 0 h 3.1 l 2.6,-13 c 0.7,-3.3 3.2,-5.8 6.1,-5.8 1.2,0 2.3,0.5 3,1.5 v 0 l 2.5,-2.2 v 0 c -1.1,-1.4 -2.8,-2.1 -4.6,-2 z"
+   id="path2"
+   style="fill:#ffffff;fill-opacity:1" />
+		<polygon
+   points="123.1,79.4 109,95.4 108.5,98 123.5,98 124.1,95.2 112.8,95.2 127,79.3 127.5,76.7 113.1,76.7 112.5,79.4 "
+   id="polygon2"
+   style="fill:#ffffff;fill-opacity:1" />
+		<polygon
+   points="173.2,76.7 168.9,97.9 168.9,98 172,98 176.3,76.7 "
+   id="polygon3"
+   style="fill:#ffffff;fill-opacity:1" />
+		<path
+   d="m 211,76.4 c -2.3,-0.1 -4.5,0.8 -6.1,2.4 l 2.4,-11.9 h -3.1 l -6.2,31 h 3.1 l 2.6,-13 c 1.1,-5.5 5.4,-5.8 6.2,-5.8 1.9,-0.2 3.6,1.2 3.8,3.1 0,0.2 0,0.4 0,0.6 0,0.7 -0.1,1.3 -0.2,2 L 210.9,98 h 3.1 l 2.7,-13.4 c 0.1,-0.7 0.2,-1.4 0.2,-2.1 0.2,-3.1 -2.2,-5.8 -5.3,-6 -0.1,0 -0.4,0 -0.6,-0.1 z"
+   id="path3"
+   style="fill:#ffffff;fill-opacity:1" />
+		<path
+   d="m 190.4,76.4 c -5.6,0 -9.6,4 -10.9,10.9 -0.2,1.1 -0.3,2.2 -0.3,3.3 0,4.7 2.9,7.7 7.5,7.7 2.7,0 5.2,-1.1 7.1,-3 v 0 L 192,93.1 v 0 c -1.2,1.5 -3.1,2.4 -5.1,2.4 -2.2,0 -4.6,-1.3 -4.6,-5 0,-1.1 0.1,-2.1 0.3,-3.2 0.3,-2.2 1.3,-4.4 2.8,-6.1 1.2,-1.3 2.9,-2 4.7,-2 1.7,-0.1 3.3,0.8 4.1,2.3 v 0 l 2.3,-1.9 v 0 c -1.3,-2.1 -3.6,-3.3 -6.1,-3.2 z"
+   id="path4"
+   style="fill:#ffffff;fill-opacity:1" />
+		<polygon
+   points="174.4,70.8 177.5,70.8 178.2,66.9 175.1,66.9 "
+   id="polygon4"
+   style="fill:#ffffff;fill-opacity:1" />
+		<polygon
+   points="144.2,70.8 147.3,70.8 148.1,66.9 145,66.9 "
+   id="polygon5-2"
+   style="fill:#ffffff;fill-opacity:1" />
+		<polygon
+   points="135.9,70.8 139,70.8 139.8,66.9 136.7,66.9 "
+   id="polygon6"
+   style="fill:#ffffff;fill-opacity:1" />
+		<polygon
+   points="106.6,66.9 96.9,66.9 94.4,79 87.4,79 89.9,66.9 30.5,66.9 24.3,98 48,98 49.5,90.2 35.5,90.2 36.4,85.9 50.3,85.9 51.8,79 37.8,79 38.6,74.7 60.8,74.7 56.1,98 65.8,98 70.5,74.7 78.6,74.7 73.9,98 83.7,98 86,85.9 93,85.9 90.6,98 100.3,98 "
+   id="polygon7"
+   style="fill:#ffffff;fill-opacity:1" />
+	</g>
+</g><text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:'SF Pro';-inkscape-font-specification:'SF Pro';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="206.89888"
+       y="17.45549"
+       id="text13"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="206.89888"
+         y="17.45549">Author: Mateusz Fido</tspan></text></g></svg>
