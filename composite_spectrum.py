@@ -34,10 +34,10 @@ class CompositeSpectrumThread(QThread):
                         file_path = Path(root) / file
                         data = np.genfromtxt(file_path, delimiter=',')
                         corr_intensity = data.transpose()[1]
-                        if 'pos' in file:
+                        if file.lower().endswith("pos"):
                             num_pos += 1
                             avg_int_pos += corr_intensity
-                        elif 'neg' in file:
+                        elif file.lower().endswith("neg"):
                             num_neg += 1
                             avg_int_neg += corr_intensity
            
