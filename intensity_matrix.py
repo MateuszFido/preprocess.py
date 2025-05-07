@@ -25,21 +25,22 @@ class IntensityMatrixThread(QThread):
         for file in filelist_csv:
             features = {}
             try:
-                if "pos" in file or "neg" in file:
+                if file.lower().endswith()."pos_trace.csv" or file.lower().endswith()."neg_trace.csv":
                     # read contents
-                    data = np.genfromtxt(self.path / "time_traces" / file, delimiter=",") 
+                    data = np.genfromtxt(self.path / "time_traces" / file, delimiter=",")
                     # iterate through all the features
                     for i in range(0, len(data)-2):    # skip 2 first lines: 1st is scan ID, 2nd is TIC
                         feature = data[i+2]
                         # pre-compute the intensity 
                         intensity = round(np.trapezoid(feature[1:]))
+                        # check if noise
                         if intensity < 10e2:
                             continue
                         # check for TIC correlation 
                         if not tic_correlate(data[1][1:], feature[1:]):
                             continue
                         # pre-compute the m/z which is on index 0 of the feature's time trace
-                        mz = "+" + f'{feature[0]}' if "pos" in file else "-" + f'{feature[0]}'
+                        mz = "+" + f'{feature[0]}' if file.lower().endswith("pos_trace.csv") in file else "-" + f'{feature[0]}'
                         try:
                             if intensity > features[mz]: 
                                 # and if the mean feature intensity is greater than the curent value for this feature
@@ -51,10 +52,7 @@ class IntensityMatrixThread(QThread):
                             features[mz] = intensity
             except EmptyDataError:
                 continue  # Skip empty files
-            if "pos" in file:
-                sample_name = os.path.basename(file).split("_pos")[0]  # Get the last folder as the sample name
-            else:
-                sample_name = os.path.basename(file).split("_neg")[0]
+            sample_name = os.path.basename(file)  # Get the last folder as the sample name
             if sample_name not in samples:
                 samples[sample_name] = features
             else:
