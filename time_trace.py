@@ -35,13 +35,13 @@ class TimeTraceThread(QThread):
         for file in filelist:
             counter += 1
             self.progress_signal.emit(f"\nFinding time traces for: {file}, {counter} out of {len(filelist)}...", int((counter/len(filelist))*100))
-            if "pos" in str(file):
+            if str(file).lower().endswith("pos"):
                 data = self.trace(str(path.parent.absolute() / file), peaklist_pos, self.MZ_AXIS)
                 with open(path / "{}.csv".format(file.lower()).replace('.mzml', "_trace"), "w+", newline='') as trace_csv:
                     writer = csv.writer(trace_csv)
                     for item in data:
                         writer.writerow(item)
-            elif "neg" in str(file):
+            elif str(file).lower().endswith("neg"):
                 data = self.trace(str(path.parent.absolute() / file), peaklist_neg, self.MZ_AXIS)
                 with open(path / "{}.csv".format(file.lower()).replace('.mzml', "_trace"), "w+", newline='') as trace_csv:
                     writer = csv.writer(trace_csv)
